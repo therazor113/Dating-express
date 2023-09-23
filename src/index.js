@@ -20,6 +20,22 @@ app.get('/', (req, res) => {
   res.json('Hello World!')
 })
 
+app.post('/signin', (req, res) => {
+  const { name, password } = req.body
+  if (!name || !password) {
+    return res.json('Request Declined!')
+  }
+  res.json('Request Accepted!')
+})
+
+app.post('/register', (req, res) => {
+  const { name, password } = req.body
+  if (!name || !password) {
+    return res.json('Request Declined!')
+  }
+  res.json('Request Accepted!')
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
