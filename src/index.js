@@ -23,17 +23,17 @@ app.get('/', (req, res) => {
 app.post('/signin', (req, res) => {
   const { name, password } = req.body
   if (!name || !password) {
-    return res.json('Request Declined!')
+    return res.json('Signin request declined!')
   }
-  res.json('Request Accepted!')
+  res.json('Signin request accepted!')
 })
 
 app.post('/register', (req, res) => {
   const { name, password } = req.body
   if (!name || !password) {
-    return res.json('Request Declined!')
+    return res.json('Register request declined!')
   }
-  res.json('Request Accepted!')
+  res.json('Register request accepted!')
 })
 
 app.listen(port, () => {
